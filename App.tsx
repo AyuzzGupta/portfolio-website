@@ -1,63 +1,33 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import BentoGrid from './components/BentoGrid';
-import ExperienceTimeline from './components/ExperienceTimeline';
-import SkillsSection from './components/SkillsSection';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import anime from 'animejs';
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
+import SkillsPage from './pages/SkillsPage';
+import EducationPage from './pages/EducationPage';
+import ConnectPage from './pages/ConnectPage';
 
 const App: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    
-    // Initial entry animations
-    // Fix: Cast anime to any to resolve "not callable" type error appearing in some ESM environments
-    (anime as any)({
-      targets: 'body',
-      opacity: [0, 1],
-      easing: 'easeInOutQuad',
-      duration: 1000
-    });
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div className="min-h-screen selection:bg-cyan-500/30">
-      <Navbar scrolled={scrolled} />
-      
-      <main className="container mx-auto px-4 md:px-8 space-y-32 pb-20">
-        <section id="home" className="pt-32">
-          <Hero />
-        </section>
+    <Router>
+      <div className="min-h-screen selection:bg-cyan-500/30 bg-[#0a0e1a]">
+        <Navbar />
+        
+        <main className="min-h-screen">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/education" element={<EducationPage />} />
+            <Route path="/connect" element={<ConnectPage />} />
+          </Routes>
+        </main>
 
-        <section id="projects">
-          <BentoGrid />
-        </section>
-
-        <section id="skills">
-          <SkillsSection />
-        </section>
-
-        <section id="education">
-          <ExperienceTimeline />
-        </section>
-
-        <section id="connect">
-          <Contact />
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
