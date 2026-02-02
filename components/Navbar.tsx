@@ -1,26 +1,18 @@
 
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
 import { RESUME_DATA } from '../constants';
 
-const Navbar: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+interface NavbarProps {
+  scrolled: boolean;
+}
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Skills', href: '/skills' },
-    { name: 'Education', href: '/education' },
-    { name: 'Connect', href: '/connect' },
+    { name: 'Home', href: '#home' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
+    { name: 'Connect', href: '#connect' },
   ];
 
   return (
@@ -37,17 +29,13 @@ const Navbar: React.FC = () => {
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
-              to={link.href}
-              className={`text-sm font-medium transition-colors duration-200 ${
-                location.pathname === link.href
-                  ? 'text-cyan-400'
-                  : 'text-slate-400 hover:text-white'
-              }`}
+              href={link.href}
+              className="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-200"
             >
               {link.name}
-            </Link>
+            </a>
           ))}
         </div>
 
