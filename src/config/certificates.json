@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Artificial Intelligence & Machine Learning Course",
+    "issuer": "Apna College",
+    "date": "Ongoing",
+    "file": "#",
+    "pinned": true,
+    "tags": ["AI"]
+  },
+  {
+    "title": "Introduction to Cybersecurity",
+    "issuer": "Cisco Networking Academy",
+    "date": "2024-09-11",
+    "file": "#",
+    "pinned": false,
+    "tags": ["Cybersecurity"]
+  },
+  {
+    "title": "HTML & CSS",
+    "issuer": "thingQbator, Nasscom Foundation",
+    "date": "2024-05-01",
+    "file": "#",
+    "pinned": false,
+    "tags": ["Web Development"]
+  },
+  {
+    "title": "Internal Hackathon SIH-2025",
+    "issuer": "Inderprastha Engineering College",
+    "date": "2025-09-12",
+    "file": "#",
+    "pinned": false,
+    "tags": ["AI"]
+  },
+  {
+    "title": "CodeForge'25 Prototype Submission",
+    "issuer": "WebForge (Unstop)",
+    "date": "2025-03-01",
+    "file": "#",
+    "pinned": false,
+    "tags": ["Web Development"]
+  },
+  {
+    "title": "Cybersecurity Essentials",
+    "issuer": "Inderprastha Engineering College & Cisco Networking Academy",
+    "date": "2025-08-11",
+    "file": "/certificates/Junior_Cybersecurity_Analyst_Career_Path_certificate_workweb-ayush-gmail-com_cf14f716-d8f8-4c0f-a6b0-59dc0c7ac5f9.pdf",
+    "pinned": false,
+    "tags": ["Cybersecurity"]
+  },
+  {
+    "title": "AI Skills Passport",
+    "issuer": "EY & Microsoft",
+    "date": "2026-06-23",
+    "file": "/certificates/Ayush_AI skil Passport.pdf",
+    "pinned": false,
+    "tags": ["AI"]
+  },
+  {
+    "title": "AI in Cyber Security Virtual Internship",
+    "issuer": "AICTE – EduSkills",
+    "date": "2026-06-15",
+    "file": "/certificates/Offer_Letter_897579_1454680.pdf",
+    "pinned": false,
+    "tags": ["AI", "Cybersecurity"]
+  },
+  {
+    "title": "Green Skills & Applied AI Internship Offer",
+    "issuer": "1M1B Foundation",
+    "date": "2026-06-09",
+    "file": "/certificates/1M1B Green Skills & Applied Internship - Offer Letter.pdf",
+    "pinned": false,
+    "tags": ["AI", "Other"]
+  },
+  {
+    "title": "Web Development Internship Offer",
+    "issuer": "3Skill",
+    "date": "2026-05-06",
+    "file": "/certificates/Offer_Letter_Ayush Gupta.pdf",
+    "pinned": false,
+    "tags": ["Web Development"]
+  }
+]
