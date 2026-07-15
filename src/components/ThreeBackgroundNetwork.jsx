@@ -63,7 +63,7 @@ export default function ThreeBackgroundNetwork() {
     const linesMaterial = new THREE.LineBasicMaterial({
       color: 0x0ea5e9,
       transparent: true,
-      opacity: 0.27, // Slightly increased line opacity to make them visible
+      opacity: 0.30, // Increased line opacity again
       blending: THREE.AdditiveBlending,
     });
 
