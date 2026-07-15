@@ -1,4 +1,4 @@
-import ThreeBackground from './components/ThreeBackground';
+import ThreeBackgroundNetwork from './components/ThreeBackgroundNetwork';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Portfolio from './components/Portfolio';
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div className="relative min-h-screen text-[#e2e8f0]">
       {/* 3D background canvas */}
-      <ThreeBackground />
+      <ThreeBackgroundNetwork />
 
       {/* Main UI layout */}
       <div className="relative z-10 flex flex-col min-h-screen">
