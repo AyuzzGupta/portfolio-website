@@ -78,5 +78,13 @@
     "file": "/certificates/Offer_Letter_Ayush Gupta.pdf",
     "pinned": false,
     "tags": ["Web Development"]
+  },
+  {
+    "title": "National Finalist - HiveMinds: The Strategy Conquest S1",
+    "issuer": "PrepBee",
+    "date": "2025-01-01",
+    "file": "/certificates/prepbee_certificate.pdf",
+    "pinned": false,
+    "tags": ["Other"]
   }
 ]
