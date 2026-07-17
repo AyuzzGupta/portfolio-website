@@ -5,12 +5,12 @@ export default function Skills() {
     {
       name: "AI & Machine Learning",
       icon: <Cpu size={18} className="text-accent" />,
-      skills: ["Machine Learning", "Data Analysis", "Statistical Modelling", "NumPy", "Pandas", "Matplotlib"]
+      skills: ["Supervised Learning", "Feature Engineering", "Model Evaluation", "Data Visualisation", "PowerBI"]
     },
     {
-      name: "Web Development",
+      name: "Frameworks & Libraries",
       icon: <Layers size={18} className="text-accent" />,
-      skills: ["React", "Node.js", "Express.js", "Tailwind CSS", "MongoDB", "REST APIs"]
+      skills: ["React", "Node.js", "Express.js", "Tailwind CSS", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
     },
     {
       name: "Languages",
@@ -18,9 +18,9 @@ export default function Skills() {
       skills: ["JavaScript", "Python", "Java", "C", "C++", "SQL", "HTML", "CSS"]
     },
     {
-      name: "Tools & Systems",
+      name: "Databases & Core CS",
       icon: <Database size={18} className="text-accent" />,
-      skills: ["Data Structures & Algorithms", "OOP", "DBMS", "Operating Systems", "Git", "GitHub", "VS Code", "IntelliJ IDEA", "Android Studio"]
+      skills: ["MongoDB", "PostgreSQL", "MySQL", "Data Structures & Algorithms", "OOP", "DBMS", "Operating Systems"]
     }
   ];
 

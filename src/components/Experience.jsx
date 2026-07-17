@@ -15,18 +15,6 @@ export default function Experience() {
       ]
     },
     {
-      role: "Artificial Intelligence & Machine Learning Course",
-      company: "Apna College (Alongside College)",
-      duration: "Ongoing",
-      location: "Online Coursework",
-      isCurrent: true,
-      description: [
-        "Undertaking intensive training in Artificial Intelligence & Machine Learning covering model structures, algorithm tuning, and practical architectures.",
-        "Developing hands-on skills in Python libraries including NumPy, Pandas, and Matplotlib for data processing and visualization.",
-        "Completing modular projects to strengthen core conceptual reasoning in predictive algorithms."
-      ]
-    },
-    {
       role: "Co-Editor / Core Team Member",
       company: "MUNify",
       duration: "2024 - 2025",
@@ -36,17 +24,6 @@ export default function Experience() {
         "Owned end-to-end content workflows across editorial and campaign verticals, improving execution throughput by ~15%.",
         "Coordinated with marketing and design teams to maintain brand consistency across multi-platform digital channels.",
         "Drove digital promotion strategies that measurably improved event discovery and delegate engagement metrics."
-      ]
-    },
-    {
-      role: "Prep-BE Competition Finalist",
-      company: "National Level Engineering Competition",
-      duration: "2024",
-      location: "India",
-      isCurrent: false,
-      description: [
-        "Selected among top student teams nationwide for solving time-bound analytical and algorithmic problem statements.",
-        "Demonstrated strong technical reasoning and data-driven decision making under competitive conditions."
       ]
     }
   ];
