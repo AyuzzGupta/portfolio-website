@@ -1,4 +1,5 @@
 import { ExternalLink, TrendingUp, Cpu, Award } from 'lucide-react';
+import Reveal from './Reveal';
 
 const GithubIcon = ({ size = 20, className = "" }) => (
   <svg
@@ -118,82 +119,85 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
-          <div className="max-w-xl text-left">
-            <div className="text-accent font-display text-xs font-semibold tracking-widest uppercase mb-3">Portfolio</div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
-              Sourced Work & Projects
-            </h2>
-            <p className="text-[#64748b] mt-4 font-sans text-base">
-              Rigorously constructed repositories highlighting full-stack engineering, API design, and predictive statistical models.
-            </p>
+        <Reveal>
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+            <div className="max-w-xl text-left">
+              <div className="text-accent font-display text-xs font-semibold tracking-widest uppercase mb-3">Portfolio</div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
+                Sourced Work & Projects
+              </h2>
+              <p className="text-[#64748b] mt-4 font-sans text-base">
+                Rigorously constructed repositories highlighting full-stack engineering, API design, and predictive statistical models.
+              </p>
+            </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* Dynamic Project Display */}
         <div className="flex flex-col gap-20">
           {projects.map((project, idx) => {
             const isEven = idx % 2 === 0;
             return (
-              <div 
-                key={project.title}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center group`}
-              >
-                {/* Content Side */}
-                <div className={`lg:col-span-6 flex flex-col items-start text-left ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
-                  <div className="flex items-center gap-3 text-xs text-[#64748b] font-display font-medium mb-3">
-                    <span className="text-accent">{project.year}</span>
-                    <span>•</span>
-                    <span>{project.role}</span>
-                  </div>
-                  
-                  <h3 className="text-2xl lg:text-3xl font-display font-bold text-white mb-4 group-hover:text-accent transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  
-                  {/* Bullet points */}
-                  <ul className="space-y-3 mb-6 text-[#94a3b8] font-sans text-sm leading-relaxed text-justify">
-                    {project.description.map((bullet, i) => (
-                      <li key={i} className="flex gap-2 items-start">
-                        <span className="text-accent mt-1.5 select-none text-[8px]">&bull;</span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <Reveal key={project.title} delay={idx * 100}>
+                <div 
+                  className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center group`}
+                >
+                  {/* Content Side */}
+                  <div className={`lg:col-span-6 flex flex-col items-start text-left ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                    <div className="flex items-center gap-3 text-xs text-[#64748b] font-display font-medium mb-3">
+                      <span className="text-accent">{project.year}</span>
+                      <span>•</span>
+                      <span>{project.role}</span>
+                    </div>
+                    
+                    <h3 className="text-2xl lg:text-3xl font-display font-bold text-white mb-4 group-hover:text-accent transition-colors duration-300">
+                      {project.title}
+                    </h3>
+                    
+                    {/* Bullet points */}
+                    <ul className="space-y-3 mb-6 text-[#94a3b8] font-sans text-sm leading-relaxed text-left md:text-justify">
+                      {project.description.map((bullet, i) => (
+                        <li key={i} className="flex gap-2 items-start">
+                          <span className="text-accent mt-1.5 select-none text-[8px]">&bull;</span>
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                  {/* Tech stack pills */}
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {project.tags.map((tag) => (
-                      <span 
-                        key={tag} 
-                        className="px-2.5 py-1 rounded bg-white/5 border border-white/5 text-[#94a3b8] font-display text-[10px] tracking-wide"
+                    {/* Tech stack pills */}
+                    <div className="flex flex-wrap gap-2 mb-8">
+                      {project.tags.map((tag) => (
+                        <span 
+                          key={tag} 
+                          className="px-2.5 py-1 rounded bg-white/5 border border-white/5 text-[#94a3b8] font-display text-[10px] tracking-wide"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Actions */}
+                    <div className="flex items-center gap-6">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs font-display font-semibold uppercase tracking-wider text-white hover:text-accent transition-colors duration-300"
                       >
-                        {tag}
-                      </span>
-                    ))}
+                        <GithubIcon size={14} />
+                        <span>Codebase</span>
+                      </a>
+
+                    </div>
                   </div>
 
-                  {/* Actions */}
-                  <div className="flex items-center gap-6">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs font-display font-semibold uppercase tracking-wider text-white hover:text-accent transition-colors duration-300"
-                    >
-                      <GithubIcon size={14} />
-                      <span>Codebase</span>
-                    </a>
-
+                  {/* Visualizer Side */}
+                  <div className={`lg:col-span-6 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                    {project.visualizer}
                   </div>
-                </div>
 
-                {/* Visualizer Side */}
-                <div className={`lg:col-span-6 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
-                  {project.visualizer}
                 </div>
-
-              </div>
+              </Reveal>
             );
           })}
         </div>
