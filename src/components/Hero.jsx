@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { FileText, Mail, ArrowDown } from 'lucide-react';
+import certificatesData from '../config/certificates.json';
 
 function Typewriter({ text, delay, speed = 50, className, cursor = true }) {
   const [displayText, setDisplayText] = useState('');
@@ -66,7 +67,7 @@ function CountUpNumber({ target, duration, suffix = '' }) {
 
     let start = 0;
     const end = parseInt(target, 10);
-    if (start === end) return;
+    if (isNaN(end) || end <= 0) return;
 
     const totalMiliseconds = duration;
     const incrementTime = Math.max(Math.floor(totalMiliseconds / end), 15);
@@ -90,6 +91,25 @@ function CountUpNumber({ target, duration, suffix = '' }) {
 }
 
 export default function Hero() {
+  const [leetcodeSolvedCount, setLeetcodeSolvedCount] = useState(48);
+
+  useEffect(() => {
+    async function fetchLiveLeetCode() {
+      try {
+        const res = await fetch('https://alfa-leetcode-api.onrender.com/userProfile/AyuzzGupta');
+        if (res.ok) {
+          const data = await res.json();
+          if (data && typeof data.totalSolved === 'number') {
+            setLeetcodeSolvedCount(data.totalSolved);
+          }
+        }
+      } catch (err) {
+        console.warn('Could not fetch live LeetCode stats for Hero:', err);
+      }
+    }
+    fetchLiveLeetCode();
+  }, []);
+
   const scrollToPortfolio = (e) => {
     e.preventDefault();
     const target = document.querySelector('#portfolio');
@@ -97,6 +117,8 @@ export default function Hero() {
       target.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const totalCertificates = certificatesData.length;
 
   return (
     <section id="home" className="min-h-[calc(100vh-80px)] flex flex-col justify-center py-16 lg:py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
@@ -127,11 +149,11 @@ export default function Hero() {
             <Typewriter text="A B.Tech 3rd-year student and digital strategist focused on constructing robust computational systems. Specializing in Machine Learning classifiers, Full-Stack Web Development, and Cybersecurity frameworks, I combine rigorous technical reasoning with a passion for building." delay={2200} speed={15} cursor={false} />
           </p>
 
-          {/* Inline Stats Block (Directly inspired by reference design) */}
+          {/* Inline Stats Block (Real-time synchronized stats) */}
           <div className="grid grid-cols-3 gap-3 sm:gap-6 md:gap-8 border-y border-white/5 py-6 w-full max-w-xl mb-8 animate-fade-in-up delay-500">
             <div>
               <div className="flex items-baseline gap-0.5">
-                <CountUpNumber target="27" duration={1000} />
+                <CountUpNumber key={leetcodeSolvedCount} target={leetcodeSolvedCount} duration={1000} />
               </div>
               <div className="text-[#64748b] text-xs font-sans mt-1">LeetCode Solved</div>
             </div>
@@ -143,7 +165,7 @@ export default function Hero() {
             </div>
             <div>
               <div className="flex items-baseline gap-0.5">
-                <CountUpNumber target="5" duration={600} />
+                <CountUpNumber target={totalCertificates} duration={600} />
               </div>
               <div className="text-[#64748b] text-xs font-sans mt-1">Certifications</div>
             </div>
@@ -179,7 +201,7 @@ export default function Hero() {
               alt="Ayush Gupta Portrait" 
               className="w-full h-full object-cover filter grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-700 ease-out"
             />
-            {/* Subtle Overlay Overlay */}
+            {/* Subtle Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#020205]/65 via-transparent to-transparent pointer-events-none" />
           </div>
         </div>
