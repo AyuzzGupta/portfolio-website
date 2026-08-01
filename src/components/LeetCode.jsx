@@ -1,7 +1,27 @@
-import { Code, Zap, ChevronRight, Brain, Terminal } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Code, ChevronRight, Brain, Terminal, RefreshCw, CheckCircle2 } from 'lucide-react';
 import Reveal from './Reveal';
 
 export default function LeetCode() {
+  const [stats, setStats] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchLeetCodeStats() {
+      try {
+        const res = await fetch('https://alfa-leetcode-api.onrender.com/userProfile/AyuzzGupta');
+        if (!res.ok) throw new Error('API response not ok');
+        const data = await res.json();
+        setStats(data);
+      } catch (err) {
+        console.warn('Failed to fetch real-time LeetCode stats:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchLeetCodeStats();
+  }, []);
+
   const activeFocus = [
     {
       topic: "Arrays & Strings",
@@ -33,7 +53,7 @@ export default function LeetCode() {
                 Algorithmic Practice Log
               </h2>
               <p className="text-[#64748b] mt-4 font-sans text-base">
-                Hands-on training on computational structures and complexity optimization.
+                Real-time synchronized solved problem log and analytical DSA focus.
               </p>
             </div>
           </div>
@@ -42,7 +62,7 @@ export default function LeetCode() {
         {/* Layout: Asymmetric split columns */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* Left Column: Topics Panel (8 cols) */}
+          {/* Left Column: Topics & Live Solved Stats (8 cols) */}
           <Reveal delay={150}>
             <div className="lg:col-span-8 p-6 lg:p-8 rounded-2xl border border-white/5 bg-[#07080f]/75 flex flex-col justify-between gap-6 relative overflow-hidden group hover:border-accent/20 transition-all duration-300">
               <div className="absolute top-0 right-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
@@ -57,7 +77,35 @@ export default function LeetCode() {
                     <p className="text-xs text-[#64748b] font-sans">Profile Verified on LeetCode</p>
                   </div>
                 </div>
+
+                {/* Live Stats Pill */}
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-display text-[10px] font-semibold uppercase tracking-wider">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Real-time Sync Active</span>
+                </div>
               </div>
+
+              {/* Real-time Solved Counter Cards */}
+              {stats && (
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+                  <div className="p-3.5 rounded-xl border border-white/5 bg-white/5">
+                    <div className="text-[10px] font-display uppercase tracking-widest text-[#64748b] mb-1">Total Solved</div>
+                    <div className="text-2xl font-display font-bold text-white">{stats.totalSolved ?? 48}</div>
+                  </div>
+                  <div className="p-3.5 rounded-xl border border-emerald-500/20 bg-emerald-500/5">
+                    <div className="text-[10px] font-display uppercase tracking-widest text-emerald-400/80 mb-1">Easy</div>
+                    <div className="text-2xl font-display font-bold text-emerald-400">{stats.easySolved ?? 38}</div>
+                  </div>
+                  <div className="p-3.5 rounded-xl border border-amber-500/20 bg-amber-500/5">
+                    <div className="text-[10px] font-display uppercase tracking-widest text-amber-400/80 mb-1">Medium</div>
+                    <div className="text-2xl font-display font-bold text-amber-400">{stats.mediumSolved ?? 10}</div>
+                  </div>
+                  <div className="p-3.5 rounded-xl border border-rose-500/20 bg-rose-500/5">
+                    <div className="text-[10px] font-display uppercase tracking-widest text-rose-400/80 mb-1">Hard</div>
+                    <div className="text-2xl font-display font-bold text-rose-400">{stats.hardSolved ?? 0}</div>
+                  </div>
+                </div>
+              )}
 
               {/* Focus Topics List */}
               <div className="flex flex-col gap-4 text-left">
@@ -107,6 +155,10 @@ export default function LeetCode() {
                   <div className="flex items-center justify-between text-xs text-[#64748b]">
                     <span className="flex items-center gap-1.5"><Terminal size={12} className="text-accent" /> Python3</span>
                     <span className="text-white font-mono text-[10px]">Primary</span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-[#64748b]">
+                    <span className="flex items-center gap-1.5"><Terminal size={12} className="text-[#64748b]" /> Java</span>
+                    <span className="text-white font-mono text-[10px]">Active</span>
                   </div>
                   <div className="flex items-center justify-between text-xs text-[#64748b]">
                     <span className="flex items-center gap-1.5"><Terminal size={12} className="text-[#64748b]" /> C</span>

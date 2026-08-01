@@ -7,7 +7,6 @@ export default function Education() {
       institution: "Inderprastha Engineering College",
       period: "Aug 2024 - Present",
       degree: "B.Tech in Computer Science Engineering",
-      score: "CGPA: 7.01",
       location: "Ghaziabad, UP",
       details: "Actively studying foundational computer science concepts including Data Structures & Algorithms, Object-Oriented Programming, DBMS, and Operating Systems.",
       icon: <GraduationCap size={18} className="text-accent" />
@@ -16,7 +15,6 @@ export default function Education() {
       institution: "Deep Memorial Public School",
       period: "2023",
       degree: "Class 12th (Senior Secondary Education)",
-      score: "Score: 75% | CBSE",
       location: "Ghaziabad, UP",
       details: "Completed high school curriculum with a primary concentration in Physics, Chemistry, Mathematics, and Computer Science.",
       icon: <BookOpen size={18} className="text-[#64748b]" />
@@ -25,9 +23,8 @@ export default function Education() {
       institution: "Deep Memorial Public School",
       period: "2021",
       degree: "Class 10th (Secondary School Examination)",
-      score: "Score: 88% | CBSE",
       location: "Ghaziabad, UP",
-      details: "Completed secondary education under the CBSE curriculum with academic honors.",
+      details: "Completed secondary education under the CBSE curriculum.",
       icon: <Award size={18} className="text-[#64748b]" />
     }
   ];

@@ -4,46 +4,111 @@
     "issuer": "Apna College",
     "date": "Ongoing",
     "file": "#",
+    "comingSoon": true,
     "pinned": true,
     "tags": ["AI"]
   },
   {
-    "title": "Introduction to Cybersecurity",
-    "issuer": "Cisco Networking Academy",
-    "date": "2024-09-11",
-    "file": "#",
-    "pinned": false,
-    "tags": ["Cybersecurity"]
-  },
-  {
-    "title": "HTML & CSS",
-    "issuer": "thingQbator, Nasscom Foundation",
-    "date": "2024-05-01",
-    "file": "#",
-    "pinned": false,
-    "tags": ["Web Development"]
-  },
-  {
-    "title": "Internal Hackathon SIH-2025",
-    "issuer": "Inderprastha Engineering College",
-    "date": "2025-09-12",
-    "file": "/certificates/sih_certificate.jpg",
+    "title": "Building AI Agents with MongoDB",
+    "issuer": "MongoDB",
+    "date": "2026-08-01",
+    "file": "/certificates/SkillsCert20260801-8-zw93g.pdf",
     "pinned": false,
     "tags": ["AI"]
   },
   {
-    "title": "CodeForge'25 Prototype Submission",
-    "issuer": "WebForge (Unstop)",
-    "date": "2025-03-01",
-    "file": "#",
+    "title": "Building RAG Apps Using MongoDB",
+    "issuer": "MongoDB",
+    "date": "2026-08-01",
+    "file": "/certificates/SkillsCert20260801-8-5vqnl1.pdf",
+    "pinned": false,
+    "tags": ["AI"]
+  },
+  {
+    "title": "AI and Innovation: How MongoDB Enables a Resilient AI Strategy",
+    "issuer": "MongoDB",
+    "date": "2026-07-31",
+    "file": "/certificates/AIandInnovationHowMongoDBEnablesaResilientAIStrategy_Badge20260801-8-746t.pdf",
+    "pinned": false,
+    "tags": ["AI"]
+  },
+  {
+    "title": "Building AI-Powered Search with MongoDB Vector Search",
+    "issuer": "MongoDB",
+    "date": "2026-07-31",
+    "file": "/certificates/SkillsCert20260801-8-dqymq5.pdf",
+    "pinned": false,
+    "tags": ["AI"]
+  },
+  {
+    "title": "MongoDB Basics for Students",
+    "issuer": "MongoDB",
+    "date": "2026-07-11",
+    "file": "/certificates/1783796402824.pdf",
+    "pinned": false,
+    "tags": ["Web Development", "AI"]
+  },
+  {
+    "title": "HTML & CSS Certificate of Excellence",
+    "issuer": "thingQbator, Nasscom Foundation",
+    "date": "2024-05-01",
+    "file": "/certificates/1783796300037.pdf",
     "pinned": false,
     "tags": ["Web Development"]
+  },
+  {
+    "title": "AI in Cyber Security Virtual Internship",
+    "issuer": "AICTE – EduSkills",
+    "date": "2026-06-15",
+    "file": "/certificates/EduSkills.pdf",
+    "pinned": false,
+    "tags": ["AI", "Cybersecurity", "Internship"]
+  },
+  {
+    "title": "ServiceNow Virtual Internship Program",
+    "issuer": "SmartBridge",
+    "date": "2026-07-01",
+    "file": "/certificates/SmartBridge.pdf",
+    "pinned": false,
+    "tags": ["AI", "Internship"]
+  },
+  {
+    "title": "Virtual Internship Program",
+    "issuer": "Beeskilled",
+    "date": "2026-08-01",
+    "file": "/certificates/Beeskilled.pdf",
+    "pinned": false,
+    "tags": ["Internship"]
+  },
+  {
+    "title": "Green Skills & Applied AI Internship",
+    "issuer": "1M1B Foundation",
+    "date": "2026-06-09",
+    "file": "/certificates/1M1B Green Skills & Applied Internship - Offer Letter.pdf",
+    "pinned": false,
+    "tags": ["AI", "Internship"]
+  },
+  {
+    "title": "Web Development Internship Offer",
+    "issuer": "3Skill",
+    "date": "2026-05-06",
+    "file": "/certificates/Offer_Letter_Ayush Gupta.pdf",
+    "pinned": false,
+    "tags": ["Web Development", "Internship"]
   },
   {
     "title": "Cybersecurity Essentials",
     "issuer": "Inderprastha Engineering College & Cisco Networking Academy",
     "date": "2025-08-11",
     "file": "/certificates/Junior_Cybersecurity_Analyst_Career_Path_certificate_workweb-ayush-gmail-com_cf14f716-d8f8-4c0f-a6b0-59dc0c7ac5f9.pdf",
+    "pinned": false,
+    "tags": ["Cybersecurity"]
+  },
+  {
+    "title": "Introduction to Cybersecurity",
+    "issuer": "Cisco Networking Academy",
+    "date": "2024-09-11",
+    "file": "#",
     "pinned": false,
     "tags": ["Cybersecurity"]
   },
@@ -56,28 +121,20 @@
     "tags": ["AI"]
   },
   {
-    "title": "AI in Cyber Security Virtual Internship",
-    "issuer": "AICTE – EduSkills",
-    "date": "2026-06-15",
-    "file": "/certificates/Offer_Letter_897579_1454680.pdf",
+    "title": "Internal Hackathon SIH-2025",
+    "issuer": "Inderprastha Engineering College",
+    "date": "2025-09-12",
+    "file": "/certificates/sih_certificate.jpg",
     "pinned": false,
-    "tags": ["AI", "Cybersecurity"]
+    "tags": ["Competitions", "AI"]
   },
   {
-    "title": "Green Skills & Applied AI Internship Offer",
-    "issuer": "1M1B Foundation",
-    "date": "2026-06-09",
-    "file": "/certificates/1M1B Green Skills & Applied Internship - Offer Letter.pdf",
+    "title": "CodeForge'25 Prototype Submission",
+    "issuer": "WebForge (Unstop)",
+    "date": "2025-03-01",
+    "file": "#",
     "pinned": false,
-    "tags": ["AI", "Other"]
-  },
-  {
-    "title": "Web Development Internship Offer",
-    "issuer": "3Skill",
-    "date": "2026-05-06",
-    "file": "/certificates/Offer_Letter_Ayush Gupta.pdf",
-    "pinned": false,
-    "tags": ["Web Development"]
+    "tags": ["Competitions", "Web Development"]
   },
   {
     "title": "National Finalist - HiveMinds: The Strategy Conquest S1",
@@ -85,6 +142,6 @@
     "date": "2025-01-01",
     "file": "/certificates/prepbee_certificate.pdf",
     "pinned": false,
-    "tags": ["Other"]
+    "tags": ["Competitions"]
   }
 ]

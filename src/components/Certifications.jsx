@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink, Award, Sparkles } from 'lucide-react';
+import { ExternalLink, Award, Sparkles, Clock } from 'lucide-react';
 import Reveal from './Reveal';
 import certificatesData from '../config/certificates.json';
 
@@ -120,15 +120,22 @@ export default function Certifications() {
                     {formatDate(cert.date)}
                   </span>
                   
-                  <a
-                    href={cert.file}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[11px] font-display font-semibold uppercase tracking-wider text-white hover:text-accent transition-colors duration-200"
-                  >
-                    <span>View Cert</span>
-                    <ExternalLink size={12} className="opacity-80" />
-                  </a>
+                  {cert.comingSoon ? (
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-display font-semibold uppercase tracking-wider text-[#64748b] cursor-not-allowed select-none">
+                      <Clock size={12} className="opacity-60" />
+                      <span>Coming Soon</span>
+                    </span>
+                  ) : (
+                    <a
+                      href={cert.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[11px] font-display font-semibold uppercase tracking-wider text-white hover:text-accent transition-colors duration-200"
+                    >
+                      <span>View Cert</span>
+                      <ExternalLink size={12} className="opacity-80" />
+                    </a>
+                  )}
                 </div>
 
               </div>
