@@ -52,7 +52,7 @@ export default function LeetCode() {
               <h2 className="text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
                 Algorithmic Practice Log
               </h2>
-              <p className="text-[#64748b] mt-4 font-sans text-base">
+              <p className="text-[#94a3b8] mt-4 font-sans text-base leading-relaxed">
                 Real-time synchronized solved problem log and analytical DSA focus.
               </p>
             </div>

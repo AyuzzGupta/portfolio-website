@@ -155,7 +155,7 @@ export default function Portfolio() {
                     </h3>
                     
                     {/* Bullet points */}
-                    <ul className="space-y-3 mb-6 text-[#94a3b8] font-sans text-sm leading-relaxed text-left md:text-justify">
+                    <ul className="space-y-3 mb-6 text-[#cbd5e1] font-sans text-sm leading-relaxed text-left md:text-justify">
                       {project.description.map((bullet, i) => (
                         <li key={i} className="flex gap-2 items-start">
                           <span className="text-accent mt-1.5 select-none text-[8px]">&bull;</span>

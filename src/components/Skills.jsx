@@ -40,7 +40,7 @@ export default function Skills() {
               <h2 className="text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
                 Technical Stack
               </h2>
-              <p className="text-[#64748b] mt-4 font-sans text-base leading-relaxed max-w-sm">
+              <p className="text-[#94a3b8] mt-4 font-sans text-base leading-relaxed max-w-sm">
                 An inventory of core programming languages, statistical packages, database services, and software engineering abstractions sourced directly from active work.
               </p>
             </div>
@@ -51,11 +51,13 @@ export default function Skills() {
             {skillCategories.map((category, idx) => (
               <Reveal key={category.name} delay={idx * 150}>
                 <div 
-                  className="p-6 rounded-xl border border-white/5 bg-[#07080f]/50 backdrop-blur-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4 group hover:border-accent/25 transition-all duration-300"
+                  className="p-6 rounded-2xl border border-white/10 bg-[#07080f]/80 hover:bg-[#0a0f1d]/90 backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 group hover:border-accent/35 transition-all duration-300 shadow-md"
                 >
                   {/* Header of category */}
                   <div className="flex items-center gap-3 text-left min-w-[200px]">
-                    {category.icon}
+                    <div className="p-2 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-accent/40 group-hover:bg-accent/10 transition-all duration-300">
+                      {category.icon}
+                    </div>
                     <h3 className="font-display font-semibold text-white text-base tracking-wide group-hover:text-accent transition-colors duration-300">
                       {category.name}
                     </h3>
@@ -66,7 +68,7 @@ export default function Skills() {
                     {category.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1.5 rounded-lg border border-white/5 bg-white/5 hover:border-accent/40 hover:bg-accent/5 hover:text-accent font-display text-xs text-[#94a3b8] transition-all duration-200 cursor-default"
+                        className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] hover:border-accent/40 hover:bg-accent/10 hover:text-accent font-display text-xs text-slate-200 transition-all duration-200 cursor-default"
                       >
                         {skill}
                       </span>
